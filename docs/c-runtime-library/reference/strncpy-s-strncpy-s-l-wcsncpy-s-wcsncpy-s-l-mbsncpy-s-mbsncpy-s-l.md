@@ -175,7 +175,7 @@ errno_t _mbsncpy_s_l(
 
 ## <a name="remarks"></a>备注
 
-这些函数尝试将第一个复制*D*个字符*strSource*到*strDest*，其中*D*是较小的*计数*和长度*strSource*。 如果这些*D*个字符将适合*strDest* (其大小给定为*numberOfElements*) 并且仍有空间为 null 终止符，则复制这些字符并追加终止 null;否则为*strDest*[0] 设置为 null 字符，并使用无效参数处理程序调用，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。
+这些函数尝试将复制*strSource*的前*D*个字符到*strDest*，其中*D*是count和*strSource*字符串长的较小者。 如果这些*D*个字符将适合*strDest* (其大小给定为*numberOfElements*) 并且仍有空间为 null 终止符，则复制这些字符并追加终止 null;否则为*strDest*[0] 设置为 null 字符，并使用无效参数处理程序调用，如中所述[参数验证](../../c-runtime-library/parameter-validation.md)。
 
 在上段描述的内容中有一个例外。 如果*计数*是 **_TRUNCATE**，然后将大部分*strSource*一样可放入*strDest*仍保留空间时复制终止 null 追加。
 
